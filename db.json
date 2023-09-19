@@ -1,0 +1,54 @@
+{
+  "projects": [
+    {
+      "name": "React Website",
+      "description": "Creating a react website",
+      "priority": {
+        "id": "2",
+        "name": "Medium"
+      },
+      "budget": "50000",
+      "deadline": "2023-09-30",
+      "tag": {
+        "id": "2",
+        "name": "Development"
+      },
+      "cost": 0,
+      "services": [],
+      "tasks": [],
+      "id": 1
+    }
+  ],
+  "priorities": [
+    {
+      "id": 1,
+      "name": "Critical"
+    },
+    {
+      "id": 2,
+      "name": "Medium"
+    },
+    {
+      "id": 3,
+      "name": "Low"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "Infra"
+    },
+    {
+      "id": 2,
+      "name": "Development"
+    },
+    {
+      "id": 3,
+      "name": "Design"
+    },
+    {
+      "id": 4,
+      "name": "Planning"
+    }
+  ]
+}
