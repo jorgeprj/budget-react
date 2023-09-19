@@ -1,0 +1,27 @@
+.form-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input input{
+    background-color: var(--background-secondary);
+    width: 100%;
+    width: 400px;
+    border: 0;
+    color: var(--text-high);
+    font-size: 1em;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    color-scheme: dark;
+    &:focus{
+        outline: none;
+
+    }
+}
+
+.form-input label{
+    font-weight: 400;
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
