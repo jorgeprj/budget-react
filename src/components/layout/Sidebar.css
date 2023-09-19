@@ -82,7 +82,7 @@
     padding: 1.5em;
     height: 100%;
     font-size: 0.75em;
-    color: var(--text-light);
+    color: var(--text-low);
 }
 
 .sidebar .sidebar-rights-text{
