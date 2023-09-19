@@ -1,0 +1,115 @@
+.sidebar{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 180px;
+    background: var(--background-secondary);
+}
+
+.sidebar a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.sidebar-header{
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    width: 100%;
+    height: 40px;
+    padding: 1.5em;
+}
+
+.sidebar .sidebar-logo{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar .sidebar-logo img{
+    width: 18px;
+    height: 18px;
+}
+
+.sidebar .sidebar-logo-text{
+    font-size: 0.9em;
+    margin-left: 0.2em;
+}
+
+.sidebar .sidebar-links{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.sidebar .sidebar-link{
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    padding-left: 1em;
+    border-left: 3px solid transparent;
+    margin-bottom: 0.25em;
+}
+
+.sidebar .sidebar-link svg{
+    font-size: 1.1em;
+    margin-right: 0.5em;
+}
+
+.sidebar .sidebar-link span{
+    font-size: 0.9em;
+}
+
+.sidebar .sidebar-link:hover{
+    color: var(--primary-color);
+}
+
+.sidebar .sidebar-link.active{
+    color: var(--primary-color);
+    font-size: 1em;
+    font-weight: 500;
+    border-left: 3px solid var(--primary-color);
+}
+
+.sidebar .sidebar-rights{
+    display: flex;
+    align-items: end;
+    text-align: center;
+    padding: 1.5em;
+    height: 100%;
+    font-size: 0.75em;
+    color: var(--text-light);
+}
+
+.sidebar .sidebar-rights-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar .sidebar-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 1em;
+}
+
+.sidebar .sidebar-icons span{
+    margin-right: 0.4em;
+    margin-left: 0.4em;
+}
+
+.sidebar .sidebar-icons span:hover{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.sidebar .sidebar-icons svg{
+    font-size: 1.4em;
+}
