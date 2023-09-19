@@ -1,0 +1,40 @@
+.navbar{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 1.5em;
+    width: calc(100vw - 180px);
+}
+.search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 0;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    width: 300px;
+    color: #dedede;
+    font-size: 14px;
+    background-color: var(--background-secondary);
+}
+
+.search svg{
+    color: var(--text-low);
+    margin-right: 0.5em;
+    font-size: 1em;
+}
+
+.navbar input{
+    background-color: transparent;
+    width: 200px;
+    border: 0;
+    color: var(--text-high);
+}
+
+.search-input:focus {
+    outline: none;
+}
