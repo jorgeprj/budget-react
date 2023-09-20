@@ -54,3 +54,9 @@
 .projects-container .projects-header .sort-btn svg{
     transform: rotate(90deg);
 }
+
+.projects-message{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
