@@ -1,0 +1,32 @@
+.mini-menu{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: absolute;
+    margin-right: 2em;
+    background-color:var(--background-components);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+    padding-right: 1em;
+    padding-left: 1em;
+    border-radius: 10px;
+    color: var(--text-low)
+}
+
+.menu-item{
+    display: flex;
+    align-items: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+}
+
+.menu-item svg{
+    margin-right: 0.5em;
+}
+
+.menu-item:hover{
+    color: var(--text-high);
+    &.menu-item svg{
+        color: var(--text-high);
+    }
+}

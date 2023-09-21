@@ -4,8 +4,8 @@
       "name": "React Website",
       "description": "Creating a react website",
       "priority": {
-        "id": "2",
-        "name": "Medium"
+        "id": "1",
+        "name": "Critical"
       },
       "budget": "50000",
       "deadline": "2023-09-30",
@@ -17,6 +17,42 @@
       "services": [],
       "tasks": [],
       "id": 1
+    },
+    {
+      "name": "Mobile App Design",
+      "description": " Design the screens for the Twiste mobile app. Based on its direct competitor: theEyeBook",
+      "priority": {
+        "id": "3",
+        "name": "Low"
+      },
+      "budget": "20000",
+      "deadline": "2024-03-24",
+      "tag": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": [],
+      "tasks": [],
+      "id": 2
+    },
+    {
+      "tag": {
+        "id": "4",
+        "name": "Planning"
+      },
+      "name": "Instagram feed",
+      "description": " Planning the month about posts for the Instagram feed",
+      "priority": {
+        "id": "2",
+        "name": "Medium"
+      },
+      "budget": "200",
+      "deadline": "2023-10-22",
+      "cost": 0,
+      "services": [],
+      "tasks": [],
+      "id": 3
     }
   ],
   "priorities": [

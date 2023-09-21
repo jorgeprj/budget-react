@@ -60,3 +60,12 @@
     text-align: center;
     justify-content: center;
 }
+
+.projects-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 2em;
+    padding-top: 0;
+    margin-right: 5em;
+}

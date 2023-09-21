@@ -1,0 +1,140 @@
+.project-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    margin-top: 1em;
+    max-width: 400px;
+    border-radius: 15px;
+    background-color: var(--background-components);
+}
+
+.project-card-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.project-card-header svg{
+    cursor: pointer;
+    color: var(--text-low);
+}
+
+.project-card-header svg:hover{
+    color: var(--text-high);
+}
+
+
+.project-card-tag{
+    background-color:#313131;
+    padding: 1em;
+    font-size: 0.6em;
+    border-radius: 4px;
+    color: var(--text-medium);
+    font-weight: 600;
+}
+
+.project-card-tag.Infra{
+    background-color:#fca88b;
+    color: #d3633a;
+}
+
+.project-card-tag.Development{
+    background-color:#bca1f1;
+    color: #7645d7;
+}
+
+.project-card-tag.Design{
+    background-color:#6dd6c7;
+    color: #189381;
+}
+
+.project-card-tag.Planning{
+    background-color:#9cbef5;
+    color: #3a74d1;
+}
+
+.project-card-name{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 0.6em;
+}
+
+.project-card-name h1{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.project-card-name .square{
+    width: 10px;
+    height: 10px;
+    border-radius: 2px ;
+    background-color: red;
+    margin-left: 0.5em;
+}
+
+.project-card-name .square.Critical{
+    background-color: #ff4647;
+}
+
+.project-card-name .square.Medium{
+    background-color: #f6ac22;
+}
+
+.project-card-name .square.Low{
+    background-color: #41cd65;
+}
+
+.project-card p{
+    margin-top: 0.6em;
+    font-size: 0.8em;
+    font-weight: 400;
+    color: var(--text-medium);
+}
+
+.project-card-date{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    margin-top: 2em;
+    color: var(--text-low);
+    padding-bottom: 0.75em;
+    border-bottom: 1px solid var(--text-low);
+}
+
+.project-card-date svg{
+    color: var(--text-low);
+    margin-right: 0.5em;
+}
+
+.project-card-date p{
+    margin: 0;
+    color: var(--text-low);
+}
+
+.project-card-last-infos{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5em;
+}
+
+.project-card-last-infos span{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    font-size: 0.8em;
+    color: var(--text-high);
+}
+
+.project-card-last-infos span svg{
+    margin-right: 0.5em;
+}
