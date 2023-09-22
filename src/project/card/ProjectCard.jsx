@@ -5,7 +5,7 @@ import { FaRegCalendar } from 'react-icons/fa'
 import { BiTask } from 'react-icons/bi'
 import { MdOutlineMiscellaneousServices } from 'react-icons/md'
 
-import MiniMenu from './mini-menu/MiniMenu'
+import MiniMenu from '../mini-menu/MiniMenu'
 
 import { useEffect, useRef, useState } from 'react'
 

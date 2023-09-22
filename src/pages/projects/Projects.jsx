@@ -5,8 +5,8 @@ import Navbar from '../../components/navbar/Navbar';
 
 import { FaPlus, FaArrowRightArrowLeft } from 'react-icons/fa6'
 import './Projects.css';
-import Message from '../../components/layout/Message';
-import ProjectCard from '../../project/ProjectCard';
+import Message from '../../components/layout/message/Message';
+import ProjectCard from '../../project/card/ProjectCard';
 
 
 const Projects = () => {
