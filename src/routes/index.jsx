@@ -1,10 +1,11 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 
-import Home from '../pages/Home';
-import Company from '../pages/Company';
-import Contact from '../pages/Contact';
-import Projects from '../pages/Projects';
-import NewProject from '../pages/NewProject';
+import Home from '../pages/home/Home';
+import Company from '../pages/company/Company';
+import Contact from '../pages/contact/Contact';
+import Projects from '../pages/projects/Projects';
+import NewProject from '../pages/newProject/NewProject';
+import Project from '../pages/project/Project';
 
 export const AppRoutes = () => {
     return (
@@ -14,6 +15,7 @@ export const AppRoutes = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects/>} />
             <Route path="/newproject" element={<NewProject/>} />
+            <Route path="/project/:id" element={<Project/>} />
             <Route path="*" element={<Navigate to="/" />} />
         </Routes>
     );

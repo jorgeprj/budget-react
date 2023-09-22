@@ -1,18 +1,20 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 
-import Navbar from '../components/navbar/Navbar';
+import Navbar from '../../components/navbar/Navbar';
 
 import { FaPlus, FaArrowRightArrowLeft } from 'react-icons/fa6'
 import './Projects.css';
-import Message from '../components/layout/Message';
-import ProjectCard from '../project/ProjectCard';
+import Message from '../../components/layout/Message';
+import ProjectCard from '../../project/ProjectCard';
 
 
 const Projects = () => {
 
 	const [projects, setProjects] = useState([]);
-
+	const [projectMessage, setProjectMessage] = useState('');
+	const [search, setSearch] = useState();
+	
 	useEffect(() => {
 
 		fetch('http://localhost:5000/projects', {
@@ -28,8 +30,6 @@ const Projects = () => {
 		.catch((err) => console.log(err));
 	}, [])
 
-	const [search, setSearch] = useState();
-
 	
 	const location = useLocation();
 	let message = ""
@@ -37,11 +37,26 @@ const Projects = () => {
 		message = location.state.text
 	}
 
+	function removeProject(id){
+		fetch(`http://localhost:5000/projects/${id}`, {
+			method: 'DELETE',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+		}).then(resp => resp.json())
+		  .then(() => {
+			setProjects(projects.filter((project) => project.id !== id))
+			setProjectMessage('Project removed successfully!');
+		  })
+		  .catch(err => console.log(err));
+	}
+
 	return (
 		<div className='main'>
 			<div className='projects'>
 				<Navbar search={search} setSearch={setSearch} />
 				{message && <Message type="success" text={message}/>}
+				{projectMessage && <Message type="success" text={projectMessage}/>}
 				<section className='projects-container'>
 					<div className='projects-header'>
 						<h1>Project Manager</h1>
@@ -67,6 +82,7 @@ const Projects = () => {
 								tasks={project.tasks}
 								services={project.services}
 								key={project.id}
+								handleRemove={removeProject}
 							/>
 						))
 					}
