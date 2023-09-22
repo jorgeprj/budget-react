@@ -2,6 +2,8 @@ import { useNavigate } from 'react-router-dom';
 import ProjectForm from '../../project/form/ProjectForm'
 import './NewProject.css'
 
+import { FaPlus } from 'react-icons/fa6'
+
 const NewProject = () => {
 
     const navigate = useNavigate();
@@ -31,7 +33,7 @@ const NewProject = () => {
             <div className='new-project'>
                 <section className='new-project-container'>
                     <h1>Create Project</h1>
-                    <ProjectForm handleSubmit={createPost} btnText={"Create project"}/>
+                    <ProjectForm handleSubmit={createPost} btnText={"Create project"} Icon={FaPlus}/>
                 </section>
             </div>
         </div>

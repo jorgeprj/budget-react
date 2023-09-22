@@ -5,7 +5,7 @@ import SubmitButton from '../../components/form/submit-button/SubmitButton';
 
 import './ProjectForm.css';
 
-const ProjectForm = ( { handleSubmit, btnText, projectData }) => {
+const ProjectForm = ( { handleSubmit, Icon, btnText, projectData }) => {
     const [tags, setTags] = useState([]);
     const [priorities, setPriorities] = useState([]);
     const [project, setProject] = useState(projectData || {});
@@ -113,7 +113,7 @@ const ProjectForm = ( { handleSubmit, btnText, projectData }) => {
                         handleOnChange={handleTag} 
                         value={project.tag ? project.tag.id : ''} 
                 />
-                <SubmitButton text={btnText} />
+                <SubmitButton text={btnText} Icon={Icon} />
             </form>
         </div>
     )

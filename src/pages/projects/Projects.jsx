@@ -12,8 +12,8 @@ import ProjectCard from '../../project/card/ProjectCard';
 const Projects = () => {
 
 	const [projects, setProjects] = useState([]);
-	const [projectMessage, setProjectMessage] = useState('');
-	const [search, setSearch] = useState();
+	const [projectMessage, setProjectMessage] = useState("");
+	const [search, setSearch] = useState("");
 	
 	useEffect(() => {
 
@@ -70,7 +70,14 @@ const Projects = () => {
 				</section>
 				<div className='projects-cards'>
 					{projects.length > 0 &&
-						projects.map((project) => (
+						projects
+						.filter((project) => project?.name.toLowerCase().includes(search?.toLowerCase()) 
+											|| 
+											project?.description.toLowerCase().includes(search?.toLowerCase()) 
+											||
+											project?.priority?.name.toLowerCase().includes(search?.toLowerCase()) 
+								)
+						.map((project) => (
 							<ProjectCard 
 								id={project.id}
 								name={project.name}

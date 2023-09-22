@@ -1,11 +1,9 @@
 import "./SubmitButton.css";
 
-import { FaPlus } from 'react-icons/fa6'
-
-const SubmitButton = ({ text }) => {
+const SubmitButton = ({ text, Icon }) => {
     return (
         <div className='submit-btn'>
-            <button type='submit'><FaPlus /> {text}</button>
+            <button type='submit'><Icon /> {text}</button>
         </div>
     )
 }

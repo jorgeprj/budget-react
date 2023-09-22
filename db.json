@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "name": "React Website",
+      "name": "PayTrack - React Website",
       "description": "The PayTrack Website will use React and Node.js to create a secure web platform for payments, emphasizing usability, security, and customer support. The delivery is scheduled within a fixed timeframe.",
       "priority": {
         "id": "1",

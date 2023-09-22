@@ -1,17 +1,23 @@
+import './Project.css'
+
 import { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
-import { AiOutlineEdit, AiOutlineClose } from 'react-icons/ai'
+import { FaX, FaPenToSquare, FaCheck } from 'react-icons/fa6'
 
-import './Project.css'
+import ProjectForm from '../../project/form/ProjectForm'
+import Message from '../../components/layout/message/Message';
 
 const Project = () => {
 
 	const { id } = useParams();
 
 	const [project, setProject] = useState([]);
-
 	const [showProjectForm, setShowProjectForm] = useState(false);
+	const [message, setMessage] = useState();
+	const [type, setType] = useState();
+
+
 
 	useEffect(() => {
 		fetch(`http://localhost:5000/projects/${id}`, {
@@ -48,20 +54,48 @@ const Project = () => {
 		setShowProjectForm(!showProjectForm);
 	};
 
+	function editPost(project){
+		if(project.budget < project.cost){
+			setMessage("The budget cannot be less than the project cost!");
+			setType('error');
+			return false;
+		}
+		fetch(`http://localhost:5000/projects/${project.id}`, {
+			method: 'PATCH',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(project),
+		}).then(resp => resp.json())
+			.then((data) => {
+				setProject(data);
+				setShowProjectForm(false);
+				setMessage("Project updated!");
+				setType('success');
+			})
+			.catch((err) => console.log(err));
+
+	}
+
 	return (
 		<div className='main'>
 			<div className='project'>
+				{message && <Message type={type} text={message}/>}
 				<div className='project-path'>
 					<Link to='/projects'>My Project/</Link>
 					{project.name}
 				</div>
 				<div className='project-name'>
 					<h1>{project.name}</h1>
-					{!showProjectForm ? <AiOutlineEdit onClick={toggleProjectForm} /> : <AiOutlineClose onClick={toggleProjectForm} />}
+					{!showProjectForm ? <FaPenToSquare onClick={toggleProjectForm} /> : <FaX onClick={toggleProjectForm} />}
 				</div>
 				{showProjectForm ? (
 					<div>
-						Form
+						<ProjectForm 
+							handleSubmit={editPost}
+							btnText={"Update"} 
+							Icon={FaCheck} 
+							projectData={project} />
 					</div>
 				) : (
 					<div>
