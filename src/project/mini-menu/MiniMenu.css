@@ -12,6 +12,10 @@
     color: var(--text-low)
 }
 
+.mini-menu a{
+    color: var(--text-low);
+}
+
 .menu-item{
     display: flex;
     align-items: center;

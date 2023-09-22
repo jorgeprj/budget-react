@@ -31,7 +31,7 @@ const NewProject = () => {
             <div className='new-project'>
                 <section className='new-project-container'>
                     <h1>Create Project</h1>
-                    <ProjectForm handleSubmit={createPost}/>
+                    <ProjectForm handleSubmit={createPost} btnText={"Create project"}/>
                 </section>
             </div>
         </div>

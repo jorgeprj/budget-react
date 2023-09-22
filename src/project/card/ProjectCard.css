@@ -7,6 +7,20 @@
     max-width: 400px;
     border-radius: 15px;
     background-color: var(--background-components);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.link {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+    background-color: red;
+  }
+
+.project-card:hover{
+    transform: scale(1.02);
 }
 
 .project-card-header{

@@ -8,9 +8,12 @@ import { MdOutlineMiscellaneousServices } from 'react-icons/md'
 import MiniMenu from '../mini-menu/MiniMenu'
 
 import { useEffect, useRef, useState } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 
 const ProjectCard = ({ id, name, description, tag, priority, budget, deadline, tasks, services, handleRemove }) => {
+
+	const navigate = useNavigate();
 
 	const remove = (e) => {
 		e.preventDefault();
@@ -38,33 +41,37 @@ const ProjectCard = ({ id, name, description, tag, priority, budget, deadline, t
 	const menuRef = useRef(null);
 
 	const handleMenuToggle = (e) => {
-		e.stopPropagation(); 
+		e.stopPropagation();
 		setIsMenuOpen(!isMenuOpen);
-	  };
+	};
 
 	useEffect(() => {
 		const handleDocumentClick = (e) => {
-		  if (menuRef.current && !menuRef.current.contains(e.target)) {
-			setIsMenuOpen(false);
-		  }
+			if (menuRef.current && !menuRef.current.contains(e.target)) {
+				setIsMenuOpen(false);
+			}
 		};
-	
+
 		document.addEventListener('click', handleDocumentClick);
-	
+
 		return () => {
-		  document.removeEventListener('click', handleDocumentClick);
+			document.removeEventListener('click', handleDocumentClick);
 		};
-	  }, []);
+	}, []);
+
+	function linkToProjectPage(){
+		navigate(`/project/${id}`)
+	}
 
 	return (
-		<div className='project-card'>
+		<div className='project-card' onClick={linkToProjectPage}>
 			<div className='project-card-header'>
 				<span className={`project-card-tag ${tag.name}`}>{tag.name}</span>
 				<div className='project-card-options'>
 					<FiMoreHorizontal onClick={handleMenuToggle} />
 					{isMenuOpen && (
 						<div ref={menuRef}>
-							<MiniMenu projectId={id} onDelete={remove}/>
+							<MiniMenu projectId={id} onDelete={remove} />
 						</div>
 					)}
 				</div>
@@ -87,6 +94,7 @@ const ProjectCard = ({ id, name, description, tag, priority, budget, deadline, t
 			</div>
 		</div>
 	)
+
 }
 
 export default ProjectCard
