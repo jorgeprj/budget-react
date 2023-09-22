@@ -1,0 +1,109 @@
+.project{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1em;
+    padding-left: 2em;
+}
+
+.project .project-path{
+    margin-top: 2em;
+    color: var(--text-low);
+}
+.project h1{
+    width: 100%;
+    font-weight: 400;
+    font-size: 2.5em;
+}
+
+.project .project-info-section{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+}
+
+.project .project-info-section h3{
+    color: var(--text-low);
+    font-weight: 400;
+    font-size: 0.9em;
+    margin: 1em 1em 1em 0;
+}
+
+.project .project-info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+
+.project .project-info div{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    color: var(--text-low);
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+
+.project .project-info h4{
+    text-align: left;
+    color: var(--text-low);
+    font-weight: 400;
+    min-width: 120px;
+}
+
+.project-info span.priority{
+    justify-content: center;
+    text-align: center;
+    padding: 0.4em 0.8em;
+    background-color: var(--background-components);
+    border-radius: 5px;
+    color: var(--text-high);
+}
+
+.project-info span.priority.Critical{
+    background-color: rgb(176, 33, 33);
+}
+
+.project-info span.priority.Medium{
+    background-color: #f6ac22;
+}
+
+.project-info span.priority.Low{
+    background-color: #41cd65;
+}
+
+.project-info .deadline .deadline-date{
+    color: var(--text-high);
+}
+
+.project-info span.tag{
+    justify-content: center;
+    text-align: center;
+    padding: 0.4em 0.8em;
+    background-color: var(--background-components);
+    border-radius: 5px;
+    color: var(--text-high);
+}
+
+.project-info span.Infra{
+    background-color:#fca88b;
+    color: #d3633a;
+}
+
+.project-info span.Development{
+    background-color:#bca1f1;
+    color: #7645d7;
+}
+
+.project-info span.Design{
+    background-color:#6dd6c7;
+    color: #189381;
+}
+
+.project-info span.Planning{
+    background-color:#9cbef5;
+    color: #3a74d1;
+}
+

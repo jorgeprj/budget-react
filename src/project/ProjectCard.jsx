@@ -12,6 +12,11 @@ import { useEffect, useRef, useState } from 'react'
 
 const ProjectCard = ({ id, name, description, tag, priority, budget, deadline, tasks, services, handleRemove }) => {
 
+	const remove = (e) => {
+		e.preventDefault();
+		handleRemove(id);
+	}
+
 	const budgetDollars = `$${parseFloat(budget).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}`
 
 	function getDate(deadline) {
@@ -51,16 +56,6 @@ const ProjectCard = ({ id, name, description, tag, priority, budget, deadline, t
 		};
 	  }, []);
 
-	  const handleEditClick = () => {
-		// Lógica para editar o projeto
-		// Você pode abrir um modal de edição ou navegar para uma página de edição, por exemplo.
-	  };
-	
-	  const handleDeleteClick = () => {
-		// Lógica para excluir o projeto
-		// Pode exibir um modal de confirmação ou enviar uma solicitação de exclusão para o servidor.
-	  };
-
 	return (
 		<div className='project-card'>
 			<div className='project-card-header'>
@@ -69,7 +64,7 @@ const ProjectCard = ({ id, name, description, tag, priority, budget, deadline, t
 					<FiMoreHorizontal onClick={handleMenuToggle} />
 					{isMenuOpen && (
 						<div ref={menuRef}>
-							<MiniMenu onEdit={handleEditClick} onDelete={handleDeleteClick}/>
+							<MiniMenu projectId={id} onDelete={remove}/>
 						</div>
 					)}
 				</div>

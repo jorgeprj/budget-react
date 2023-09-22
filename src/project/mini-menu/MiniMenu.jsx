@@ -1,13 +1,16 @@
+import { Link } from 'react-router-dom';
 import './MiniMenu.css';
 
 import { AiOutlineDelete, AiOutlineEdit } from 'react-icons/ai'
 
 
-const MiniMenu = ( {onEdit, onDelete} ) => {
+const MiniMenu = ( {projectId, onDelete} ) => {
     return (
         <div>
             <div className="mini-menu">
-                <div className="menu-item" onClick={onEdit}><AiOutlineEdit/> Edit</div>
+                <Link to={`/project/${projectId}`}>
+                    <div className="menu-item"><AiOutlineEdit/> Edit</div>
+                </Link>
                 <div className="menu-item" onClick={onDelete}><AiOutlineDelete/> Delete</div>
             </div>
         </div>
