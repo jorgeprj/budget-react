@@ -21,7 +21,7 @@ const Sidebar = () => {
 			<div className='sidebar'>
 				<div className='sidebar-header'>
 					<div className='sidebar-logo'>
-						<img src='./logo.png' alt='logo' />
+						<img src='../public/logo.png' alt='logo' />
 						<span className='sidebar-logo-text'>Taskee</span>
 					</div>
 				</div>
