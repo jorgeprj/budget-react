@@ -4,7 +4,7 @@
 }
 
 .form-input input{
-    background-color: var(--background-secondary);
+    background-color: var(--background-components);
     width: 100%;
     width: 400px;
     border: 0;
