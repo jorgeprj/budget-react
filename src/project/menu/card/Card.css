@@ -1,0 +1,121 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    max-width: 300px;
+    min-height: 180px;
+    border-radius: 15px;
+    background-color: var(--background-components);
+    transition: 0.4s;
+}
+
+.card-name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.card-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.card-options svg{
+    margin-left: 0.5em;
+    color: var(--text-low);
+    cursor: pointer;
+}
+
+.card-options svg:hover{
+    color: var(--text-high);
+}
+
+.card-description{
+    color: var(--text-medium);
+    font-size: 0.9em;
+}
+
+.card-cost{
+    margin-top: 1em;
+    color: var(--text-low);
+}
+
+.card-cost span{
+    color: rgb(176, 33, 33);
+}
+
+.add-card{
+    display: flex;
+    padding: 1em;
+    max-width: 300px;
+    min-height: 180px;
+    border-radius: 15px;
+    transition: 0.4s;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+}
+
+.add-card:hover{
+    background-color: #123822;
+}
+
+
+.add-card .add-card-text{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.2em;
+}
+.card-status{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+
+.card-status-icon{
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    background-color: var(--background-secondary);
+    margin-right: 0.5em;
+}
+
+.card-status-icon.Completed{
+    background-color: #41cd65;
+}
+
+.card-status-icon.Review{
+    background-color: #f6ac22;
+}
+
+.card-status-icon.Progress{
+    background-color: #22a5f6;
+}
+
+.card-status-icon.Todo{
+    background-color: #5b5b5b;
+}
+
+.card-date{
+    margin-top: 1em;
+    color: var(--text-low);
+    font-size: 1em;
+}
+
+.card-date span{
+    color: var(--text-high);
+    font-size: 1em;
+}

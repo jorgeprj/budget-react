@@ -16,7 +16,7 @@
     color: var(--text-low);
 }
 
-.menu-item{
+.mini-menu-item{
     display: flex;
     align-items: center;
     margin-top: 0.5em;
@@ -24,11 +24,11 @@
     cursor: pointer;
 }
 
-.menu-item svg{
+.mini-menu-item svg{
     margin-right: 0.5em;
 }
 
-.menu-item:hover{
+.mini-menu-item:hover{
     color: var(--text-high);
     &.menu-item svg{
         color: var(--text-high);

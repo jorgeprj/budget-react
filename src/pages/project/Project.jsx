@@ -7,6 +7,7 @@ import { FaX, FaPenToSquare, FaCheck } from 'react-icons/fa6'
 
 import ProjectForm from '../../project/form/ProjectForm'
 import Message from '../../components/layout/message/Message';
+import Menu from '../../project/menu/Menu'
 
 const Project = () => {
 
@@ -55,6 +56,8 @@ const Project = () => {
 	};
 
 	function editPost(project){
+		setMessage("")
+
 		if(project.budget < project.cost){
 			setMessage("The budget cannot be less than the project cost!");
 			setType('error');
@@ -121,6 +124,9 @@ const Project = () => {
 								<h4>Total cost:</h4>
 								<span style={{ color: 'rgb(176, 33, 33)' }}>{costDollars}</span>
 							</div>
+						</div>
+						<div>
+							<Menu project={project}/>
 						</div>
 					</div>
 				)}

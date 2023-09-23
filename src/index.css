@@ -39,6 +39,7 @@ h1, h2, h3, h4, h5, h6{
 	display: flex;
 	margin-left: 180px;
 	height: 100%;
+	padding-right: 1em;
 }
 
 a{

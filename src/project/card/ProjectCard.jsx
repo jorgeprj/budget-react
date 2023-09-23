@@ -8,7 +8,7 @@ import { MdOutlineMiscellaneousServices } from 'react-icons/md'
 import MiniMenu from '../mini-menu/MiniMenu'
 
 import { useEffect, useRef, useState } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 const ProjectCard = ({ id, name, description, tag, priority, budget, deadline, tasks, services, handleRemove }) => {
@@ -71,7 +71,7 @@ const ProjectCard = ({ id, name, description, tag, priority, budget, deadline, t
 					<FiMoreHorizontal onClick={handleMenuToggle} />
 					{isMenuOpen && (
 						<div ref={menuRef}>
-							<MiniMenu projectId={id} onDelete={remove} />
+							<MiniMenu pathToEdit={`/project/${id}`} onDelete={remove} />
 						</div>
 					)}
 				</div>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Input from '../../components/form/input/Input';
 import Select from '../../components/form/select/Select';
-import SubmitButton from '../../components/form/submit-button/SubmitButton';
+import SubmitButton from '../../components/form/submitButton/SubmitButton';
 
 import './ProjectForm.css';
 

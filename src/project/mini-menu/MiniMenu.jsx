@@ -4,14 +4,14 @@ import './MiniMenu.css';
 import { AiOutlineDelete, AiOutlineEdit } from 'react-icons/ai'
 
 
-const MiniMenu = ( {projectId, onDelete} ) => {
+const MiniMenu = ( {pathToEdit, onDelete} ) => {
     return (
         <div>
             <div className="mini-menu">
-                <Link to={`/project/${projectId}`}>
-                    <div className="menu-item"><AiOutlineEdit/> Edit</div>
+                <Link to={`${pathToEdit}`}>
+                    <div className="mini-menu-item"><AiOutlineEdit/> Edit</div>
                 </Link>
-                <div className="menu-item" onClick={onDelete}><AiOutlineDelete/> Delete</div>
+                <div className="mini-menu-item" onClick={onDelete}><AiOutlineDelete/> Delete</div>
             </div>
         </div>
     )
