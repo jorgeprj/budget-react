@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import ProjectForm from '../../project/form/ProjectForm'
+import ProjectForm from '../../components/project/form/ProjectForm'
 import './NewProject.css'
 
 import { FaPlus } from 'react-icons/fa6'

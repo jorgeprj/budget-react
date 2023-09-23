@@ -13,8 +13,15 @@
         "id": "2",
         "name": "Development"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 10000,
+      "services": [
+        {
+          "name": "Service 1",
+          "description": "Desc 1",
+          "cost": "10000",
+          "id": "37f8f72e-f4d3-490c-9be4-a3a94040aa32"
+        }
+      ],
       "tasks": [],
       "id": 1
     },
@@ -51,7 +58,28 @@
       "deadline": "2023-10-22",
       "cost": 0,
       "services": [],
-      "tasks": [],
+      "tasks": [
+        {
+          "name": "Task 5",
+          "description": "Desc 5",
+          "deadline": "2023-10-20",
+          "status": {
+            "id": "3",
+            "name": "Todo"
+          },
+          "id": "5012a35f-ef80-4629-85bc-8d9bef77f952"
+        },
+        {
+          "name": "Task 1",
+          "description": "Desc 1",
+          "deadline": "2023-10-17",
+          "status": {
+            "id": "1",
+            "name": "Completed"
+          },
+          "id": "3d010bd1-30bd-4ff5-b11d-8031eab7d8d9"
+        }
+      ],
       "id": 3
     }
   ],
@@ -85,6 +113,24 @@
     {
       "id": 4,
       "name": "Planning"
+    }
+  ],
+  "status": [
+    {
+      "id": 1,
+      "name": "Completed"
+    },
+    {
+      "id": 2,
+      "name": "Progress"
+    },
+    {
+      "id": 3,
+      "name": "Todo"
+    },
+    {
+      "id": 4,
+      "name": "Review"
     }
   ]
 }

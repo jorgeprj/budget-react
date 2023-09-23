@@ -1,13 +1,14 @@
 import './Project.css'
 
 import { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
+
 
 import { FaX, FaPenToSquare, FaCheck } from 'react-icons/fa6'
 
-import ProjectForm from '../../project/form/ProjectForm'
+import ProjectForm from '../../components/project/form/ProjectForm'
 import Message from '../../components/layout/message/Message';
-import Menu from '../../project/menu/Menu'
+import Menu from '../../components/project/menu/Menu';
 
 const Project = () => {
 
@@ -17,8 +18,6 @@ const Project = () => {
 	const [showProjectForm, setShowProjectForm] = useState(false);
 	const [message, setMessage] = useState();
 	const [type, setType] = useState();
-
-
 
 	useEffect(() => {
 		fetch(`http://localhost:5000/projects/${id}`, {
@@ -51,14 +50,15 @@ const Project = () => {
 		return `${day} ${month} ${year}`;
 	};
 
+
 	function toggleProjectForm() {
 		setShowProjectForm(!showProjectForm);
 	};
 
-	function editPost(project){
+	function editPost(project) {
 		setMessage("")
 
-		if(project.budget < project.cost){
+		if (project.budget < project.cost) {
 			setMessage("The budget cannot be less than the project cost!");
 			setType('error');
 			return false;
@@ -83,7 +83,7 @@ const Project = () => {
 	return (
 		<div className='main'>
 			<div className='project'>
-				{message && <Message type={type} text={message}/>}
+				{message && <Message type={type} text={message} />}
 				<div className='project-path'>
 					<Link to='/projects'>My Project/</Link>
 					{project.name}
@@ -94,10 +94,10 @@ const Project = () => {
 				</div>
 				{showProjectForm ? (
 					<div>
-						<ProjectForm 
+						<ProjectForm
 							handleSubmit={editPost}
-							btnText={"Update"} 
-							Icon={FaCheck} 
+							btnText={"Update"}
+							Icon={FaCheck}
 							projectData={project} />
 					</div>
 				) : (
@@ -126,7 +126,7 @@ const Project = () => {
 							</div>
 						</div>
 						<div>
-							<Menu project={project}/>
+							<Menu project={project} setMessage={setMessage} setType={setType} />
 						</div>
 					</div>
 				)}
