@@ -20,27 +20,30 @@ const Message = ({ type, text }) => {
         }, 6000)
 
         return () => clearTimeout(timer);
-
+        
     }, [text]);
 
     return (
         <>
             {visible && (
-                <div className={`message ${type}`}>
-                    {type === "error" ? (
-                        <>
-                            <div><FaX/></div>
-                            <div>{text}</div>
-                        </>
-                    ) : type === "success" ? (
-                        <>
-                            <div><FaCheck/></div>
-                            <div>{text}</div>
-                        </>
-                    ) : (
-                        text
-                    )}
+                <div className='message-container'>
+                    <div className={`message ${type}`}>
+                        {type === "error" ? (
+                            <>
+                                <div><FaX /></div>
+                                <div>{text}</div>
+                            </>
+                        ) : type === "success" ? (
+                            <>
+                                <div><FaCheck /></div>
+                                <div>{text}</div>
+                            </>
+                        ) : (
+                            text
+                        )}
+                    </div>
                 </div>
+
             )}
         </>
     )
