@@ -10,7 +10,7 @@ import { parse, v4 as uuidv4 } from 'uuid';
 
 import Card from './card/Card';
 import ServiceForm from '../../service/form/ServiceForm';
-import TaskForm from '../../tasks/form/TaskForm';
+import TaskForm from '../../task/form/TaskForm';
 
 const Menu = ({ project, setMessage, setType }) => {
 	const [tabServices, setTabServices] = useState(true);

@@ -78,6 +78,16 @@
             "name": "Completed"
           },
           "id": "3d010bd1-30bd-4ff5-b11d-8031eab7d8d9"
+        },
+        {
+          "name": "Task 2",
+          "description": "Desc 2",
+          "deadline": "2023-10-11",
+          "status": {
+            "id": "2",
+            "name": "Progress"
+          },
+          "id": "296554b7-2773-4038-a461-934b01bf5de5"
         }
       ],
       "id": 3
