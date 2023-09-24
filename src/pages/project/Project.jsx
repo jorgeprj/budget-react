@@ -105,6 +105,30 @@ const Project = () => {
 			.catch((err) => console.log(err));
 	}
 
+	function removeTask(id) {
+		const tasksUpdated = project.tasks.filter(
+			(task) => task.id !== id
+		)
+
+		const projectUpdated = project
+
+		projectUpdated.tasks = tasksUpdated;
+
+		fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
+			method: 'PATCH',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(projectUpdated),
+		}).then(resp => resp.json())
+			.then((data) => {
+				setProject(projectUpdated)
+				setMessage("Task removed successfully!");
+				setType('success');
+			})
+			.catch((err) => console.log(err));
+	}
+
 
 	return (
 		<div className='main'>
@@ -152,7 +176,7 @@ const Project = () => {
 							</div>
 						</div>
 						<div>
-							<Menu project={project} setMessage={setMessage} setType={setType} removeService={removeService} />
+							<Menu project={project} setMessage={setMessage} setType={setType} removeService={removeService} removeTask={removeTask} />
 						</div>
 					</div>
 				)}

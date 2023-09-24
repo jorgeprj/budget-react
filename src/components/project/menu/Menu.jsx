@@ -12,7 +12,7 @@ import Card from './card/Card';
 import ServiceForm from '../../service/form/ServiceForm';
 import TaskForm from '../../task/form/TaskForm';
 
-const Menu = ({ project, setMessage, setType, removeService }) => {
+const Menu = ({ project, setMessage, setType, removeService, removeTask }) => {
 	const [tabServices, setTabServices] = useState(true);
 	const [serviceForm, setServiceForm] = useState(false);
 	const [taskForm, setTaskForm] = useState(false);
@@ -110,7 +110,7 @@ const Menu = ({ project, setMessage, setType, removeService }) => {
 				{tabServices && (
 					!serviceForm ? (
 						<div className='menu-cards'>
-							{project.services?.map( (service) => <Card key={service.id} service={service}  handleService={removeService} />)}
+							{project.services?.map( (service) => <Card key={service.id} service={service} handleService={removeService} />)}
 							<Card addCard={true} setForm={setServiceForm} text={"Service"}/>
 						</div>
 					) : (
@@ -131,7 +131,7 @@ const Menu = ({ project, setMessage, setType, removeService }) => {
 				{!tabServices && (
 					!taskForm ? (
 						<div className='menu-cards'>
-							{project.tasks?.map( (task) => <Card key={task.id} task={task} />)}
+							{project.tasks?.map( (task) => <Card key={task.id} task={task} handleTask={removeTask} />)}
 							<Card addCard={true} setForm={setTaskForm} text={"Task"} />
 						</div>
 					) : (

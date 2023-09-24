@@ -60,16 +60,6 @@
       "services": [],
       "tasks": [
         {
-          "name": "Task 5",
-          "description": "Desc 5",
-          "deadline": "2023-10-20",
-          "status": {
-            "id": "3",
-            "name": "Todo"
-          },
-          "id": "5012a35f-ef80-4629-85bc-8d9bef77f952"
-        },
-        {
           "name": "Task 1",
           "description": "Desc 1",
           "deadline": "2023-10-17",
