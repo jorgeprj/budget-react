@@ -64,7 +64,7 @@ const ProjectCard = ({ id, name, description, tag, priority, budget, deadline, t
 	}
 
 	return (
-		<div className='project-card' onClick={linkToProjectPage}>
+		<div className='project-card'>
 			<div className='project-card-header'>
 				<span className={`project-card-tag ${tag.name}`}>{tag.name}</span>
 				<div className='project-card-options'>
@@ -76,19 +76,19 @@ const ProjectCard = ({ id, name, description, tag, priority, budget, deadline, t
 					)}
 				</div>
 			</div>
-			<div className='project-card-name'>
+			<div className='project-card-name' onClick={linkToProjectPage}>
 				<h1>{name}</h1>
 				<div className={`square ${priority.name}`}></div>
 			</div>
-			<p>{description}</p>
-			<p><strong>Budget:</strong> {budgetDollars}</p>
+			<p onClick={linkToProjectPage}>{description}</p>
+			<p onClick={linkToProjectPage}><strong>Budget:</strong> {budgetDollars}</p>
 
-			<div className='project-card-date'>
+			<div className='project-card-date' onClick={linkToProjectPage}>
 				<FaRegCalendar />
 				<p>{getDate(deadline)}</p>
 			</div>
 
-			<div className='project-card-last-infos'>
+			<div className='project-card-last-infos' onClick={linkToProjectPage}>
 				<span><BiTask /> {tasks.length} tasks</span>
 				<span><MdOutlineMiscellaneousServices /> {services.length} services</span>
 			</div>
