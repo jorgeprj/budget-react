@@ -2,7 +2,17 @@ import './Card.css'
 
 import { AiOutlineDelete, AiOutlineEdit } from 'react-icons/ai'
 
-const Card = ({ service, task, addCard, setForm, text }) => {
+const Card = ({ service, task, addCard, setForm, text, handleService, handleTask }) => {
+
+    const removeService = (e) => {
+        e.preventDefault(e);
+        handleService(service.id, service.cost)
+    }
+
+    const removeTask = (e) => {
+        e.preventDefault(e);
+        handleTask(task.id)
+    }
 
 
     let costDollars = ""
@@ -44,7 +54,7 @@ const Card = ({ service, task, addCard, setForm, text }) => {
                         {service.name}
                         <div className='card-options'>
                             <AiOutlineEdit />
-                            <AiOutlineDelete />
+                            <AiOutlineDelete onClick={removeService}/>
                         </div>
                     </div>
                     <div className='card-description'>

@@ -12,7 +12,7 @@ import Card from './card/Card';
 import ServiceForm from '../../service/form/ServiceForm';
 import TaskForm from '../../task/form/TaskForm';
 
-const Menu = ({ project, setMessage, setType }) => {
+const Menu = ({ project, setMessage, setType, removeService }) => {
 	const [tabServices, setTabServices] = useState(true);
 	const [serviceForm, setServiceForm] = useState(false);
 	const [taskForm, setTaskForm] = useState(false);
@@ -26,13 +26,6 @@ const Menu = ({ project, setMessage, setType }) => {
 	function toggleTasks() {
 		setTabServices(false);
 		setServiceForm(false);
-	}
-
-	const taskExample = {
-		name: "Team Meeting",
-		description: "We have a meeting on 9am 7th July. So I request everyone to join",
-		deadline: "2023-09-30",
-		status: "Completed",
 	}
 
 	function createService(project) {
@@ -117,8 +110,8 @@ const Menu = ({ project, setMessage, setType }) => {
 				{tabServices && (
 					!serviceForm ? (
 						<div className='menu-cards'>
-							{project.services?.map( (service) => <Card key={service.id} service={service} />)}
-							<Card addCard={true} setForm={setServiceForm} text={"Service"} />
+							{project.services?.map( (service) => <Card key={service.id} service={service}  handleService={removeService} />)}
+							<Card addCard={true} setForm={setServiceForm} text={"Service"}/>
 						</div>
 					) : (
 						<div>

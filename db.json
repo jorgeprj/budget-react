@@ -13,13 +13,13 @@
         "id": "2",
         "name": "Development"
       },
-      "cost": 10000,
+      "cost": 34000,
       "services": [
         {
-          "name": "Service 1",
-          "description": "Desc 1",
-          "cost": "10000",
-          "id": "37f8f72e-f4d3-490c-9be4-a3a94040aa32"
+          "name": "Service 2",
+          "description": "Desc 2",
+          "cost": "34000",
+          "id": "8f1c83ff-d369-4f69-ab14-f0d7b2a169a5"
         }
       ],
       "tasks": [],
