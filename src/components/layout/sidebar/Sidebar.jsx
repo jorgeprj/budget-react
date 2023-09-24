@@ -9,8 +9,8 @@ import './Sidebar.css';
 const links = [
 	{ to: '/', icon: <RxDashboard />, text: 'Home' },
 	{ to: '/projects', icon: <RxLaptop />, text: 'Projects' },
-	{ to: '/company', icon: <RxArchive />, text: 'Company' },
-	{ to: '/contact', icon: <RxChatBubble />, text: 'Contact' },
+	{ to: '/aboutproject', icon: <RxArchive />, text: 'About Project' },
+	{ to: '/contact', icon: <RxChatBubble />, text: 'Contact Dev' },
 ];
 
 const Sidebar = () => {

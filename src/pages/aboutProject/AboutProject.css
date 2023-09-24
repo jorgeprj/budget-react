@@ -1,0 +1,52 @@
+.about-project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    padding-left: 2em;
+    width: 100%;
+}
+
+.about-project h1{
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    font-weight: 400;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.about-project p{
+    max-width: 800px;
+}
+
+.about-project img{
+    margin-top: 2em;
+    max-width: 800px;
+}
+
+.about-project .info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 800px;
+}
+
+.about-project .info h2{
+    margin-top: 2em;
+}
+
+.about-project .info ul{
+    margin-top: 1em;
+    margin-left: 1.2em;
+}
+
+.about-project footer{
+    margin-top: 4em;
+}
+
+.about-project footer a:hover{
+    color: var(--primary-color);
+
+}
