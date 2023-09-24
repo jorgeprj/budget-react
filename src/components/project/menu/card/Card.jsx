@@ -53,7 +53,6 @@ const Card = ({ service, task, addCard, setForm, text, handleService, handleTask
                     <div className='card-name'>
                         {service.name}
                         <div className='card-options'>
-                            <AiOutlineEdit />
                             <AiOutlineDelete onClick={removeService}/>
                         </div>
                     </div>
